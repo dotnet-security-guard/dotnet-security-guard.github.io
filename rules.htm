@@ -71,9 +71,15 @@
   <a name="CommandInjectionAnalyzer"></a>
   <h3>Potential command injection with Process.Start</h3>
   <p>The dynamic value passed to the command execution should be validate.</p>
+  <a name="WeakCipherModeAnalyzerGeneric"></a>
+  <h3>Weak cipher mode</h3>
+  <p>The ciphertext produced is susceptible to alteration by an adversary. This mean that the cipher provides no way to detect that the data has been tampered with. If the ciphertext can be controlled by an attacker, it could be altered without detection. The use of AES in CBC mode with a HMAC is recommended guaranteeing integrity and confidentiality.</p>
   <a name="LinqSqlInjectionAnalyzer"></a>
   <h3>Potential SQL injection with LINQ</h3>
   <p>The dynamic value passed in the SQL query should be validate.</p>
+  <a name="XxeAnalyzer"></a>
+  <h3>XML parsing vulnerable to XXE</h3>
+  <p>The XML parser is configured incorrectly. The operation could be vulnerable to XXE.</p>
   <a name="WeakCipherAnalyzer"></a>
   <h3>Weak cipher algorithm</h3>
   <p>DES is not considered strong ciphers for modern applications. Currently, NIST recommends the usage of AES block ciphers instead of DES.</p>
@@ -89,18 +95,15 @@
   <a name="WeakCertificateValidationAnalyzer"></a>
   <h3>Certificate Validation has been disable</h3>
   <p>Certificate Validation has been disable. The communication could be intercepted.</p>
-  <a name="WeakCipherModeAnalyzerOfb"></a>
-  <h3>Weak cipher mode</h3>
-  <p>The ciphertext produced is susceptible to alteration by an adversary. This mean that the cipher provides no way to detect that the data has been tampered with. If the ciphertext can be controlled by an attacker, it could be altered without detection.</p>
   <a name="WeakCipherModeAnalyzerCbc"></a>
-  <h3>CBC mode is insecure</h3>
+  <h3>CBC mode is weak</h3>
   <p>This specific mode of CBC with PKCS5Padding is susceptible to padding oracle attacks. An adversary could potentially decrypt the message if the system exposed the difference between plaintext with invalid padding or valid padding.</p>
   <a name="ValidateRequestFalse"></a>
   <h3>Request validation has been disabled (Future<a href="#configuration-files">*</a>)</h3>
   <p>Request validation, which provided additionnal protection against Cross-Site Scripting (XSS), has been disabled. </p>
   <a name="WeakCipherModeAnalyzerEcb"></a>
-  <h3>ECB mode is insecure</h3>
-  <p>An authentication cipher mode which provides better confidentiality of the encrypted data should be used instead of Electronic Codebook (ECB) mode, which does not provide good confidentiality. Specifically, ECB mode produces the same output for the same input each time. So, for example, if a user is sending a password, the encrypted value is the same each time. This allows an attacker to intercept and replay the data.</p>
+  <h3>ECB mode is weak</h3>
+  <p>The ECB mode produce the same result for identical blocks (ie: 16 bytes for AES). An attacker could be able to guess the encrypted message. The use of AES in CBC mode with a HMAC is recommended guaranteeing integrity and confidentiality.</p>
 
     </div>
 </section>
