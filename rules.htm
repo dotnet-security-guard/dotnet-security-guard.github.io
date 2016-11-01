@@ -59,51 +59,60 @@
 <section id="rules" class="rules-list">
     <div class="container highlight highlight-left">
 
-  <a name="WeakHashingAnalyzer"></a>
-  <h3>Weak hashing function</h3>
-  <p>The hashing function "X" is no longer recommended for password storage and signature generation.</p>
-  <a name="XPathInjectionAnalyzer"></a>
-  <h3>Potential XPath injection with XmlDocument</h3>
-  <p>The dynamic value passed to the XPath query should be validate</p>
-  <a name="EnableEventValidationFalse"></a>
-  <h3>Event validation is disabled</h3>
-  <p>Event validation is disabled. The integrity of client-side control will not be validate on postback.</p>
-  <a name="CommandInjectionAnalyzer"></a>
-  <h3>Potential command injection with Process.Start</h3>
-  <p>The dynamic value passed to the command execution should be validate.</p>
-  <a name="WeakCipherModeAnalyzerGeneric"></a>
-  <h3>Weak cipher mode</h3>
-  <p>The ciphertext produced is susceptible to alteration by an adversary. This mean that the cipher provides no way to detect that the data has been tampered with. If the ciphertext can be controlled by an attacker, it could be altered without detection. The use of AES in CBC mode with a HMAC is recommended guaranteeing integrity and confidentiality.</p>
-  <a name="LinqSqlInjectionAnalyzer"></a>
-  <h3>Potential SQL injection with LINQ</h3>
-  <p>The dynamic value passed in the SQL query should be validate.</p>
-  <a name="XxeAnalyzer"></a>
-  <h3>XML parsing vulnerable to XXE</h3>
-  <p>The XML parser is configured incorrectly. The operation could be vulnerable to XXE.</p>
-  <a name="WeakCipherAnalyzer"></a>
-  <h3>Weak cipher algorithm</h3>
-  <p>DES is not considered strong ciphers for modern applications. Currently, NIST recommends the usage of AES block ciphers instead of DES.</p>
-  <a name="WeakRandomAnalyzer"></a>
+  <a name="SG0005"></a>
   <h3>Weak random generator</h3>
   <p>The random numbers generated could be predicted.</p>
-  <a name="EnableViewStateMac"></a>
-  <h3>View state mac is disabled (Future<a href="#configuration-files">*</a>)</h3>
-  <p>View state mac is disable. The view state could be altered by an attacker. (This feature cannot be disabled in the recent version of ASP.net)</p>
-  <a name="ViewStateEncryptionModeFalse"></a>
-  <h3>View state is not encrypted (Future<a href="#configuration-files">*</a>)</h3>
-  <p>View state is not encrypted. Controls may leak sensitive data that could be read client-side.</p>
-  <a name="WeakCertificateValidationAnalyzer"></a>
-  <h3>Certificate Validation has been disable</h3>
-  <p>Certificate Validation has been disable. The communication could be intercepted.</p>
-  <a name="WeakCipherModeAnalyzerCbc"></a>
+  <a name="SG0014"></a>
+  <h3>Potential SQL injection</h3>
+  <p>The dynamic value passed in the SQL query should be validated.</p>
+  <a name="SG0013"></a>
+  <h3>Weak cipher mode</h3>
+  <p>The ciphertext produced is susceptible to alteration by an adversary. This mean that the cipher provides no way to detect that the data has been tampered with. If the ciphertext can be controlled by an attacker, it could be altered without detection. The use of AES in CBC mode with a HMAC is recommended guaranteeing integrity and confidentiality.</p>
+  <a name="SG0012"></a>
+  <h3>ECB mode is weak</h3>
+  <p>ECB mode will produce the same result for identical blocks (ie: 16 bytes for AES). An attacker could be able to guess the encrypted message. The use of AES in CBC mode with a HMAC is recommended guaranteeing integrity and confidentiality.</p>
+  <a name="SG0011"></a>
   <h3>CBC mode is weak</h3>
   <p>This specific mode of CBC with PKCS5Padding is susceptible to padding oracle attacks. An adversary could potentially decrypt the message if the system exposed the difference between plaintext with invalid padding or valid padding.</p>
-  <a name="ValidateRequestFalse"></a>
-  <h3>Request validation has been disabled (Future<a href="#configuration-files">*</a>)</h3>
-  <p>Request validation, which provided additionnal protection against Cross-Site Scripting (XSS), has been disabled. </p>
-  <a name="WeakCipherModeAnalyzerEcb"></a>
-  <h3>ECB mode is weak</h3>
-  <p>The ECB mode produce the same result for identical blocks (ie: 16 bytes for AES). An attacker could be able to guess the encrypted message. The use of AES in CBC mode with a HMAC is recommended guaranteeing integrity and confidentiality.</p>
+  <a name="SG0010"></a>
+  <h3>Weak cipher algorithm</h3>
+  <p>DES is not considered a strong cipher for modern applications. Currently, NIST recommends the usage of AES block ciphers instead of DES.</p>
+  <a name="SG0004"></a>
+  <h3>Certificate Validation has been disabled</h3>
+  <p>Certificate Validation has been disabled. The communication could be intercepted.</p>
+  <a name="SG0007"></a>
+  <h3>XML parsing vulnerable to XXE</h3>
+  <p>The XML parser is configured incorrectly. The operation could be vulnerable to XML eXternal Entity (XXE) processing.</p>
+  <a name="SG0023"></a>
+  <h3>View state is not encrypted (Future)</h3>
+  <p>View state is not encrypted. Controls may leak sensitive data that could be read client-side.</p>
+  <a name="SG0008"></a>
+  <h3>The cookie is missing security flag Secure</h3>
+  <p>It is recommended to specify the Secure flag to new cookie.</p>
+  <a name="SG0009"></a>
+  <h3>The cookie is missing security flag HttpOnly</h3>
+  <p>It is recommended to specify the HttpOnly flag to new cookie.</p>
+  <a name="SG0001"></a>
+  <h3>Potential command injection with Process.Start</h3>
+  <p>The dynamic value passed to the command execution should be validated.</p>
+  <a name="SG0002"></a>
+  <h3>Potential SQL injection with LINQ</h3>
+  <p>The dynamic value passed in the SQL query should be validated.</p>
+  <a name="SG0003"></a>
+  <h3>Potential XPath injection with XmlDocument</h3>
+  <p>The dynamic value passed to the XPath query should be validated</p>
+  <a name="SG0022"></a>
+  <h3>Event validation is disabled</h3>
+  <p>Event validation is disabled. The integrity of client-side control will not be validated on postback.</p>
+  <a name="SG0024"></a>
+  <h3>View state mac is disabled (Future)</h3>
+  <p>View state mac is disabled. The view state could be altered by an attacker. (This feature cannot be disabled in the recent version of ASP.net)</p>
+  <a name="SG0006"></a>
+  <h3>Weak hashing function</h3>
+  <p>The hashing function "{0}" is no longer recommended for password storage and signature generation.</p>
+  <a name="SG0021"></a>
+  <h3>Request validation has been disabled (Future)</h3>
+  <p>Request validation, which provided additionnal protection against Cross-Site Scripting (XSS), has been disabled.</p>
 
     </div>
 </section>
