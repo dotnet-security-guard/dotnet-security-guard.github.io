@@ -59,9 +59,9 @@
 <section id="rules" class="rules-list">
     <div class="container highlight highlight-left">
 
-  <a name="SG0005"></a>
-  <h3>Weak random generator</h3>
-  <p>The random numbers generated could be predicted.</p>
+  <a name="SG0015"></a>
+  <h3>Hardcoded password</h3>
+  <p>The password configuration to this API appears to be hardcoded. It is suggest to externalized configuration such as password to avoid leakage of secret information.</p>
   <a name="SG0014"></a>
   <h3>Potential SQL injection</h3>
   <p>The dynamic value passed in the SQL query should be validated.</p>
@@ -80,6 +80,9 @@
   <a name="SG0004"></a>
   <h3>Certificate Validation has been disabled</h3>
   <p>Certificate Validation has been disabled. The communication could be intercepted.</p>
+  <a name="SG0005"></a>
+  <h3>Weak random generator</h3>
+  <p>The random numbers generated could be predicted.</p>
   <a name="SG0007"></a>
   <h3>XML parsing vulnerable to XXE</h3>
   <p>The XML parser is configured incorrectly. The operation could be vulnerable to XML eXternal Entity (XXE) processing.</p>
