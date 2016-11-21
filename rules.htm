@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Rules - Security Guard</title>
+  <title>Rules - Roslyn Security Guard</title>
   <meta charset="utf-8">
 
   <link href="css/bootstrap.min.css" media="screen" rel="stylesheet">
@@ -51,8 +51,8 @@
 
 <div class="index-header jumbotron jumbotron-ad hidden-print">
     <div class="container">
-        <h1><i class="fa fa-search"></i>&nbsp; Rules</h1>
-        <div class="header-text">The rules included in the extension.</div>
+        <h1><i class="fa fa-bug"></i>&nbsp; Rules</h1>
+        <div class="header-text">The rules are various bug patterns that can be found by the analyzers.</div>
     </div>
 </div>
 
@@ -83,42 +83,57 @@
   <a name="SG0010"></a>
   <h3>Weak cipher algorithm</h3>
   <p>{0} is not considered a strong cipher for modern applications. Currently, NIST recommends the usage of AES block ciphers instead of {0}.</p>
+  <a name="SG0002"></a>
+  <h3>Potential SQL injection with LINQ API</h3>
+  <p>The dynamic value passed in the SQL query should be validated.</p>
   <a name="SG0019"></a>
   <h3>OutputCache annotation is disabling authorization checks</h3>
   <p>Having the annotation [OutputCache] will disable the annotation [Authorize] for the requests following the first one.</p>
   <a name="SG0018"></a>
   <h3>Path traversal</h3>
   <p>The file path passed to this API is susceptible to Path traversal attacks. With a malicious relative path, an attacker could reach a secret file.</p>
-  <a name="SG0024"></a>
-  <h3>View state mac is disabled (Future)</h3>
-  <p>View state mac is disabled. The view state could be altered by an attacker. (This feature cannot be disabled in the recent version of ASP.net)</p>
-  <a name="SG0004"></a>
-  <h3>Certificate Validation has been disabled</h3>
-  <p>Certificate Validation has been disabled. The communication could be intercepted.</p>
-  <a name="SG0023"></a>
-  <h3>View state is not encrypted (Future)</h3>
-  <p>View state is not encrypted. Controls may leak sensitive data that could be read client-side.</p>
-  <a name="SG0021"></a>
-  <h3>Request validation has been disabled (Future)</h3>
-  <p>Request validation, which provided additionnal protection against Cross-Site Scripting (XSS), has been disabled.</p>
   <a name="SG0008"></a>
   <h3>The cookie is missing security flag Secure</h3>
   <p>It is recommended to specify the Secure flag to new cookie.</p>
   <a name="SG0009"></a>
   <h3>The cookie is missing security flag HttpOnly</h3>
   <p>It is recommended to specify the HttpOnly flag to new cookie.</p>
+  <a name="SG0028"></a>
+  <h3>Potential SQL injection with SqlUtility</h3>
+  <p>The dynamic value passed in the SQL query should be validated.</p>
+  <a name="SG0027"></a>
+  <h3>Potential SQL injection with WebControls</h3>
+  <p>The dynamic value passed in the SQL query should be validated.</p>
+  <a name="SG0026"></a>
+  <h3>Potential SQL injection with MsSQL Data Provider</h3>
+  <p>The dynamic value passed in the SQL query should be validated.</p>
   <a name="SG0001"></a>
   <h3>Potential command injection with Process.Start</h3>
   <p>The dynamic value passed to the command execution should be validated.</p>
-  <a name="SG0002"></a>
-  <h3>Potential SQL injection with LINQ</h3>
+  <a name="SG0024"></a>
+  <h3>View state mac is disabled (Future)</h3>
+  <p>View state mac is disabled. The view state could be altered by an attacker. (This feature cannot be disabled in the recent version of ASP.net)</p>
+  <a name="SG0025"></a>
+  <h3>Potential SQL injection with Odbc API</h3>
   <p>The dynamic value passed in the SQL query should be validated.</p>
-  <a name="SG0003"></a>
-  <h3>Potential XPath injection with XmlDocument</h3>
-  <p>The dynamic value passed to the XPath query should be validated</p>
   <a name="SG0022"></a>
   <h3>Event validation is disabled</h3>
   <p>Event validation is disabled. The integrity of client-side control will not be validated on postback.</p>
+  <a name="SG0023"></a>
+  <h3>View state is not encrypted (Future)</h3>
+  <p>View state is not encrypted. Controls may leak sensitive data that could be read client-side.</p>
+  <a name="SG0020"></a>
+  <h3>Potential SQL injection with OleDb API</h3>
+  <p>The dynamic value passed in the SQL query should be validated.</p>
+  <a name="SG0021"></a>
+  <h3>Request validation has been disabled (Future)</h3>
+  <p>Request validation, which provided additionnal protection against Cross-Site Scripting (XSS), has been disabled.</p>
+  <a name="SG0003"></a>
+  <h3>Potential XPath injection with XmlDocument</h3>
+  <p>The dynamic value passed to the XPath query should be validated</p>
+  <a name="SG0004"></a>
+  <h3>Certificate Validation has been disabled</h3>
+  <p>Certificate Validation has been disabled. The communication could be intercepted.</p>
   <a name="SG0005"></a>
   <h3>Weak random generator</h3>
   <p>The random numbers generated could be predicted.</p>

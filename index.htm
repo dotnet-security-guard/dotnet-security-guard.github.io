@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Home - Security Guard</title>
+  <title>Home - Roslyn Security Guard</title>
   <meta charset="utf-8">
 
   <link href="css/bootstrap.min.css" media="screen" rel="stylesheet">
@@ -55,9 +55,9 @@
         <h2><b>Security Guard</b> is a set of roslyn analyzers that aim to help security audit on .<b>NET applications</b></h2>
         <div class="buttons">
           <a class="btn btn-default btn-lg btn-transparent btn-download"
-             href="https://visualstudiogallery.msdn.microsoft.com/28033821-c053-4652-b529-0bad9c0feba4/referral/232680" role="button">
+             href="https://visualstudiogallery.msdn.microsoft.com/28033821-c053-4652-b529-0bad9c0feba4?redir=0" role="button">
              <i class="fa fa-download" aria-hidden="true"></i> 
-             Download v2.0.0</a><br><br>
+             Download v2.1.0</a><br><br>
           <span class="github-btn">
             <iframe src="https://ghbtns.com/github-btn.html?user=dotnet-security-guard&amp;repo=roslyn-security-guard&amp;type=star&amp;count=true&amp;size=large"
                   frameborder="0" scrolling="0" width="130px" height="30px"></iframe> 
@@ -80,12 +80,20 @@
         </div>
         <div class="row">
             <div class="col-md-4 col-sm-6">
-                <h4><i class="fa fa-crosshairs"></i> 23 bug patterns</h4>
-                It can detect <a href="rules.htm">23 vulnerability patterns</a> with 62 different signatures.
+                <h4><i class="fa fa-bug"></i> 28 bug patterns</h4>
+                It can detect <a href="rules.htm">28 vulnerability patterns</a> with 67 different signatures.
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <h4><i class="fa fa-medkit"></i> Code fixes</h4>
+                Code fixes are automated refactoring to fix vulnerabilities at the source.
             </div>
             <div class="col-md-4 col-sm-6">
                 <h4><i class="fa fa-plug"></i> Integration</h4>
-                The Roslyn analyzers can be run from <a href="#">Visual Studio</a>.
+                The Roslyn analyzers can be run from <a href="#">Visual Studio</a> 2015 and higher.
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <h4><i class="fa fa-search"></i> Taint analysis</h4>
+                Taint analysis is the capability to track variables in the code flow and trace variable coming from user input. This helps reducing false positives.
             </div>
             <div class="col-md-4 col-sm-6">
                 <h4><i class="fa fa-cogs"></i> Continuous integration</h4>
