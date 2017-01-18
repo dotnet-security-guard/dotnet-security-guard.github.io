@@ -23,6 +23,8 @@
   <meta name="twitter:description" content="Security Guard is a set of Roslyn analyzers that aim to help security audits on .NET applications." />
   <meta name="twitter:title" content="Roslyn Security Guard" />
 
+  <meta name="keywords" content="security,owasp,csharp,c#,vb,.net,dotnet,asp.net,mvc,scanner,vulnerability,injection" />
+
   <!-- IE 6-8 support of HTML 5 elements -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!--[if lt IE 9]>
@@ -68,88 +70,179 @@
 
   <a name="SG0017"></a>
   <h3>Request validation is disable</h3>
-  <p>Request validation is disable. Request validation allow the filtering of some XSS patterns submitted to the application.</p>
+
+  <p>Request validation is disable. Request validation allow the filtering of some XSS patterns submitted to the application.</p> <a href="SG0017.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
   <a name="SG0016"></a>
   <h3>Controller method is vulnerable to CSRF</h3>
-  <p>The annotation [ValidateAntiForgeryToken] is missing.</p>
+
+  <p>The annotation [ValidateAntiForgeryToken] is missing.</p> <a href="SG0016.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
   <a name="SG0015"></a>
   <h3>Hardcoded password</h3>
-  <p>The password configuration to this API appears to be hardcoded. It is suggest to externalized configuration such as password to avoid leakage of secret information.</p>
+
+  <p>The password configuration to this API appears to be hardcoded. It is suggest to externalized configuration such as password to avoid leakage of secret information.</p> <a href="SG0015.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
   <a name="SG0014"></a>
   <h3>Potential SQL injection</h3>
-  <p>The dynamic value passed in the SQL query should be validated.</p>
+
+  <p>The dynamic value passed in the SQL query should be validated.</p> <a href="SG0014.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
   <a name="SG0013"></a>
   <h3>Weak cipher mode</h3>
-  <p>The ciphertext produced is susceptible to alteration by an adversary. This mean that the cipher provides no way to detect that the data has been tampered with. If the ciphertext can be controlled by an attacker, it could be altered without detection. The use of AES in CBC mode with a HMAC is recommended guaranteeing integrity and confidentiality.</p>
+
+  <p>The ciphertext produced is susceptible to alteration by an adversary. This mean that the cipher provides no way to detect that the data has been tampered with. If the ciphertext can be controlled by an attacker, it could be altered without detection. The use of AES in CBC mode with a HMAC is recommended guaranteeing integrity and confidentiality.</p> <a href="SG0013.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
   <a name="SG0012"></a>
   <h3>ECB mode is weak</h3>
-  <p>ECB mode will produce the same result for identical blocks (ie: 16 bytes for AES). An attacker could be able to guess the encrypted message. The use of AES in CBC mode with a HMAC is recommended guaranteeing integrity and confidentiality.</p>
+
+  <p>ECB mode will produce the same result for identical blocks (ie: 16 bytes for AES). An attacker could be able to guess the encrypted message. The use of AES in CBC mode with a HMAC is recommended guaranteeing integrity and confidentiality.</p> <a href="SG0012.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
   <a name="SG0011"></a>
   <h3>CBC mode is weak</h3>
-  <p>This specific mode of CBC with PKCS5Padding is susceptible to padding oracle attacks. An adversary could potentially decrypt the message if the system exposed the difference between plaintext with invalid padding or valid padding.</p>
+
+  <p>This specific mode of CBC with PKCS5Padding is susceptible to padding oracle attacks. An adversary could potentially decrypt the message if the system exposed the difference between plaintext with invalid padding or valid padding.</p> <a href="SG0011.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
   <a name="SG0010"></a>
   <h3>Weak cipher algorithm</h3>
-  <p>{0} is not considered a strong cipher for modern applications. Currently, NIST recommends the usage of AES block ciphers instead of {0}.</p>
-  <a name="SG0002"></a>
-  <h3>Potential SQL injection with LINQ API</h3>
-  <p>The dynamic value passed in the SQL query should be validated.</p>
+
+  <p>{0} is not considered a strong cipher for modern applications. Currently, NIST recommends the usage of AES block ciphers instead of {0}.</p> <a href="SG0010.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
   <a name="SG0019"></a>
   <h3>OutputCache annotation is disabling authorization checks</h3>
-  <p>Having the annotation [OutputCache] will disable the annotation [Authorize] for the requests following the first one.</p>
+
+  <p>Having the annotation [OutputCache] will disable the annotation [Authorize] for the requests following the first one.</p> <a href="SG0019.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
   <a name="SG0018"></a>
   <h3>Path traversal</h3>
-  <p>The file path passed to this API is susceptible to Path traversal attacks. With a malicious relative path, an attacker could reach a secret file.</p>
-  <a name="SG0008"></a>
-  <h3>The cookie is missing security flag Secure</h3>
-  <p>It is recommended to specify the Secure flag to new cookie.</p>
-  <a name="SG0009"></a>
-  <h3>The cookie is missing security flag HttpOnly</h3>
-  <p>It is recommended to specify the HttpOnly flag to new cookie.</p>
-  <a name="SG0028"></a>
-  <h3>Potential SQL injection with SqlUtility</h3>
-  <p>The dynamic value passed in the SQL query should be validated.</p>
+
+  <p>The file path passed to this API is susceptible to Path traversal attacks. With a malicious relative path, an attacker could reach a secret file.</p> <a href="SG0018.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
   <a name="SG0027"></a>
   <h3>Potential SQL injection with WebControls</h3>
-  <p>The dynamic value passed in the SQL query should be validated.</p>
-  <a name="SG0026"></a>
-  <h3>Potential SQL injection with MsSQL Data Provider</h3>
-  <p>The dynamic value passed in the SQL query should be validated.</p>
-  <a name="SG0001"></a>
-  <h3>Potential command injection with Process.Start</h3>
-  <p>The dynamic value passed to the command execution should be validated.</p>
+
+  <p>The dynamic value passed in the SQL query should be validated.</p> <a href="SG0027.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
   <a name="SG0024"></a>
   <h3>View state mac is disabled (Future)</h3>
-  <p>View state mac is disabled. The view state could be altered by an attacker. (This feature cannot be disabled in the recent version of ASP.net)</p>
-  <a name="SG0025"></a>
-  <h3>Potential SQL injection with Odbc API</h3>
-  <p>The dynamic value passed in the SQL query should be validated.</p>
-  <a name="SG0022"></a>
-  <h3>Event validation is disabled</h3>
-  <p>Event validation is disabled. The integrity of client-side control will not be validated on postback.</p>
-  <a name="SG0023"></a>
-  <h3>View state is not encrypted (Future)</h3>
-  <p>View state is not encrypted. Controls may leak sensitive data that could be read client-side.</p>
-  <a name="SG0020"></a>
-  <h3>Potential SQL injection with OleDb API</h3>
-  <p>The dynamic value passed in the SQL query should be validated.</p>
-  <a name="SG0021"></a>
-  <h3>Request validation has been disabled (Future)</h3>
-  <p>Request validation, which provided additionnal protection against Cross-Site Scripting (XSS), has been disabled.</p>
+
+  <p>View state mac is disabled. The view state could be altered by an attacker. (This feature cannot be disabled in the recent version of ASP.net)</p> <a href="SG0024.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
   <a name="SG0003"></a>
   <h3>Potential XPath injection with XmlDocument</h3>
-  <p>The dynamic value passed to the XPath query should be validated</p>
+
+  <p>The dynamic value passed to the XPath query should be validated</p> <a href="SG0003.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
   <a name="SG0004"></a>
   <h3>Certificate Validation has been disabled</h3>
-  <p>Certificate Validation has been disabled. The communication could be intercepted.</p>
+
+  <p>Certificate Validation has been disabled. The communication could be intercepted.</p> <a href="SG0004.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
   <a name="SG0005"></a>
   <h3>Weak random generator</h3>
-  <p>The random numbers generated could be predicted.</p>
+
+  <p>The random numbers generated could be predicted.</p> <a href="SG0005.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
   <a name="SG0006"></a>
   <h3>Weak hashing function</h3>
-  <p>{0} is no longer considered a strong hashing algorithim for password storage and signature generation.</p>
+
+  <p>{0} is no longer considered a strong hashing algorithim for password storage and signature generation.</p> <a href="SG0006.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
   <a name="SG0007"></a>
   <h3>XML parsing vulnerable to XXE</h3>
-  <p>The XML parser is configured incorrectly. The operation could be vulnerable to XML eXternal Entity (XXE) processing.</p>
+
+  <p>The XML parser is configured incorrectly. The operation could be vulnerable to XML eXternal Entity (XXE) processing.</p> <a href="SG0007.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
+  <a name="SG0008"></a>
+  <h3>The cookie is missing security flag Secure</h3>
+
+  <p>It is recommended to specify the Secure flag to new cookie.</p> <a href="SG0008.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
+  <a name="SG0009"></a>
+  <h3>The cookie is missing security flag HttpOnly</h3>
+
+  <p>It is recommended to specify the HttpOnly flag to new cookie.</p> <a href="SG0009.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
+  <a name="SG0028"></a>
+  <h3>Potential SQL injection with SqlUtility</h3>
+
+  <p>The dynamic value passed in the SQL query should be validated.</p> <a href="SG0028.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
+  <a name="SG0029"></a>
+  <h3>Potential XSS vulnerability</h3>
+
+  <p>The endpoint returns a variable from the client input that has not been encoded.</p> <a href="SG0029.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
+  <a name="SG0026"></a>
+  <h3>Potential SQL injection with MsSQL Data Provider</h3>
+
+  <p>The dynamic value passed in the SQL query should be validated.</p> <a href="SG0026.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
+  <a name="SG0001"></a>
+  <h3>Potential command injection with Process.Start</h3>
+
+  <p>The dynamic value passed to the command execution should be validated.</p> <a href="SG0001.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
+  <a name="SG0002"></a>
+  <h3>Potential SQL injection with LINQ API</h3>
+
+  <p>The dynamic value passed in the SQL query should be validated.</p> <a href="SG0002.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
+  <a name="SG0025"></a>
+  <h3>Potential SQL injection with Odbc API</h3>
+
+  <p>The dynamic value passed in the SQL query should be validated.</p> <a href="SG0025.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
+  <a name="SG0022"></a>
+  <h3>Event validation is disabled</h3>
+
+  <p>Event validation is disabled. The integrity of client-side control will not be validated on postback.</p> <a href="SG0022.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
+  <a name="SG0023"></a>
+  <h3>View state is not encrypted (Future)</h3>
+
+  <p>View state is not encrypted. Controls may leak sensitive data that could be read client-side.</p> <a href="SG0023.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
+  <a name="SG0020"></a>
+  <h3>Potential SQL injection with OleDb API</h3>
+
+  <p>The dynamic value passed in the SQL query should be validated.</p> <a href="SG0020.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
+  <a name="SG0021"></a>
+  <h3>Request validation has been disabled (Future)</h3>
+
+  <p>Request validation, which provided additionnal protection against Cross-Site Scripting (XSS), has been disabled.</p> <a href="SG0021.htm" class="btn-info btn-sm" role="button">More Details</a>
+  
+    <hr/>
+
 
     </div>
 </section>
@@ -166,13 +259,24 @@
 <footer>
 <div class="highlight-gray">
   <div class="container footer text-center">
-        <p>.NET Security Guard is open source licensed under the <a href="https://www.gnu.org/licenses/lgpl-3.0.en.html">GNU Lesser General Public License (LGPL)</a>.</p>
+        <p>.NET Security Guard is open source licensed under the <a href="https://www.gnu.org/licenses/lgpl-3.0.en.html">GNU Lesser General Public License 3.0 (LGPL)</a>.</p>
   </div>
 </div>
 </footer>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-90570539-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
 </body>
 </html>
